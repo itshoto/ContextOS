@@ -1,0 +1,31 @@
+{
+  "name": "contextos-extension",
+  "displayName": "ContextOS",
+  "description": "ContextOS Chrome extension (Manifest V3): background service worker, content script, and popup UI.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "build:popup": "vite build --config src/popup/vite.config.ts",
+    "build": "npm run compile && npm run build:popup",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

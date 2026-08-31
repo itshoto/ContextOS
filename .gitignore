@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Node
+node_modules/
+dist/
+out/
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Editor / OS
+.vscode-test/
+.DS_Store
+Thumbs.db
+
+# Docker volumes are managed by Docker itself, nothing to ignore here.
