@@ -44,9 +44,9 @@ chunking, embedding, retrieval, and LLM work.
                                          │ HTTP (fetch, background worker only)
                                          ▼
                          ┌─────────────────────────────┐
-                         │   backend/  (FastAPI, :8000) │
-                         │   CORS enabled for extension  │
-                         │                              │
+                         │   backend/  (FastAPI, :8000)│
+                         │   CORS enabled for extension│
+                         │                             │
                          │  routers/ingest  ──► chunk + embed
                          │  routers/query   ──► embed question,
                          │                       pgvector search,
@@ -62,10 +62,10 @@ chunking, embedding, retrieval, and LLM work.
                              │          │           │
                     ┌────────▼───┐ ┌────▼─────┐ ┌───▼────┐
                     │  Postgres  │ │  Redis   │ │ Neo4j  │
-                    │ + pgvector │ │ (unused  │ │ (STUB, │
-                    │ documents  │ │  yet)    │ │ empty) │
+                    │ + pgvector │ │          │ │ (STUB, │
+                    │ documents  │ |          │ │ empty) │
                     │  + chunks  │ │          │ │        │
-                    │ + embeddings│ │          │ │        │
+                    │+ embeddings│ │          │ │        │
                     └────────────┘ └──────────┘ └────────┘
 ```
 
